@@ -1,0 +1,9 @@
+<div class="fullpage">
+  <div class="content text-center">
+    <h1 class="title_page"><%= @article.title %></h1>
+    <p class="content_page"><%= @article.content %></p>
+
+    <%= link_to 'edit', edit_wiki_path(@article), class: 'link_page btn btn-warning' %>
+    <%= link_to 'delete', edit_wiki_path(@article), class: 'link_page btn btn-danger' %>
+  </div>
+</div>

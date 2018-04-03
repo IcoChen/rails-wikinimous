@@ -1,0 +1,13 @@
+
+<div class="fullpage">
+  <div class="content text-center">
+    <h1 class="title_page">Wiki - list</h1>
+    <ul class="content_page title_article list-unstyled">
+      <% @articles.each do |article| %>
+      <li><%= link_to article.title, wiki_path(article) %></li>
+      <%= link_to("Delete", wiki_path(article), method: :delete, data: { confirm: "Are you sure?" } ) %></p>
+      <% end %>
+    </ul>
+    <%= link_to 'create', new_wiki_path, class: 'link_page btn btn-primary' %>
+  </div>
+</div>
